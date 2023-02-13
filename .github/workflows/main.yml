@@ -21,7 +21,6 @@ jobs:
         uses: docker/build-push-action@v4.0.0
         with:
           context: .
-          file: .
           push: true
           tags: |
             adefendi/nifi:0.0.1
