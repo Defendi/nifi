@@ -1,0 +1,21 @@
+name: 'Neocredit Nifi Image'
+
+on:
+  push:
+    branches: [main]
+    
+jobs:
+  CI:
+    runs-on: ubuntu-latest
+    steps:
+    
+      - uses: actions/checkout@3.0.0
+      
+      - name: Build Image
+        uses: docker/build-push-action@v4.0.0
+        with:
+          context: .
+          file: .
+          tags:
+            defendi/nifi:0.0.1
+            defendi/nifi:latest
