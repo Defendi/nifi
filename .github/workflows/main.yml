@@ -16,6 +16,6 @@ jobs:
         with:
           context: .
           file: .
-          tags:
+          tags: |
             defendi/nifi:0.0.1
             defendi/nifi:latest
